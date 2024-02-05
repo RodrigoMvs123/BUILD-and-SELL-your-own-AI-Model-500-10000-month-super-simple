@@ -2,6 +2,8 @@
 
 https://www.youtube.com/watch?v=i6qL3NqFjs4 
 
+https://raw.githubusercontent.com/RodrigoMvs123/BUILD-and-SELL-your-own-AI-Model-500-10000-month-super-simple/main/README.md 
+
 Gravity A.I.
 https://www.gravity-ai.com/ 
 
