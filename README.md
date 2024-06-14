@@ -1,4 +1,4 @@
-# BUILD-and-SELL-your-own-AI-Model-500-10000-month-super-simple
+## BUILD-and-SELL-your-own-AI-Model-500-10000-month-super-simple
 
 https://www.youtube.com/watch?v=i6qL3NqFjs4 
 
@@ -6,29 +6,41 @@ https://raw.githubusercontent.com/RodrigoMvs123/BUILD-and-SELL-your-own-AI-Model
 
 https://github.com/RodrigoMvs123/BUILD-and-SELL-your-own-AI-Model-500-10000-month-super-simple/blame/main/README.md
 
-Gravity A.I.
-https://www.gravity-ai.com/ 
+
+## Gravity A.I.
+- https://www.gravity-ai.com/ 
 
 Install Touch Command on Windows
+```bash
 npm install touch-cli -g
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 touch classify_financial_articles.py
+```
 
-Install the Extension Python on Visual Studio Code
+## Install the Extension Python on Visual Studio Code
 
 Install Python3 on Windows
+
 https://www.python.org/downloads/windows/ 
 
 Prompt
+```bash
 python3 - -version 
+```
 
-Visual Studio Code
+### Visual Studio Code
 Shift ctrl P
+```javascript
 Python: Select Interpreter 
 Python 3.10.11 64-bit(Microsoft Store) Recommended 
+```
 
+## Source Code
+```javascript
 Visual Studio Code
 Explorer 
 Open Editors
@@ -36,7 +48,9 @@ classify_financial_articles.py
 
 classify_financial_articles.py
 print('hello !') // Run Python File 
+```
 
+```javascript
 
 Visual Studio Code
 Explorer 
@@ -45,7 +59,9 @@ classify_financial_articles.py
 
 classify_financial_articles.py
 from gravityai import gravityai as grav
+```
 
+```javascript
 Visual Studio Code
 Explorer 
 Open Editors
@@ -57,11 +73,16 @@ gravityai
 numpy
 pandas
 scikit-learn
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 python3 -m pip install -r requirements.txt
+```
 
+## Source Code
+```javascript
 Visual Studio Code
 Explorer 
 Open Editors
@@ -90,69 +111,100 @@ def process(inPath, outPath):
     output_df.to.cvs(outPath, index=false)
 
     grav.wait_for_requests(process)
+```
 
-Open Google Colab
+## Open Google Colab
+
 https://colab.research.google.com/drive/17CpEAn5QG3wu8_miwDwx8iJvSGSLEAxk 
 
 Building Financial Article Category Classifier.ipynb
-
+```javascript
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.ensemble import RandomForestClassifier 
 from sklearn import preprocessing
 import pandas as pd
 import json
 import pickle
+```
 
-Code
+#### Google Colab Code
+```
 financial_corpus_df = pd.read_cvs('training_data.csv')
 
 https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html 
+``` 
 
-Code
+#### Google Colab Code
+```
 financial_corpus_df
+```
 
-Code
+#### Google Colab Code
+```
 financial_corpus_df['category'].unique()
+```
 
-Code
+#### Google Colab Code
+```
 label_encoder = processing.LabelEncoder()
 label_encoder.fit(financial_corpus_df['category'])
 financial_corpus_df['label'] = label_encoder.transform(financial_corpus_df['category'])
+```
 
-Code
+#### Google Colab Code
+```
 financial_corpus_df['label'].unique()
+```
 
-Code
-financial_corpus_df
+#### Google Colab Code
+```
+finZncial_corpus_df
+```
 
-Code
+#### Google Colab Code
+```
 vectorizer = TdidfVectorizer(stop_words = 'english', max_features=1000)
+```
 
-Code
+#### Goolge Colab Code
+```
 x = financial_corpus_df['body']
 y = financial_corpus_df['label']
+```
 
-Code
+#### Google Colab Code
+```
 vectorize_x = vectorizer.fit_transform(x)
+```
 
-Code
+#### Google Colab Code
+```
 rf_clf = RandomForestClassifier()
+```
 
-Code
+#### Google Colab Code
+```
 rf_clf.fit(vectorized_x, y)
+```
 
-Code
+#### Goolge Colab Code
+```
 pickle.dump(rf_clf, open('financial_text_classifier.pkl', 'wb'))
 pickle.dump(vectorizer, open('financial_text_vectorizer.pkl', 'wb'))
 pickle.dump(label_encoder, open('financial_text_encoder.pkl', 'wb'))
+```
 
 Download Files 
+```
 financial_text_classifier.pkl
 financial_text_encoder.pkl
 financial_text_vectorizer.pkl
+```
 
+## Prompt
 code .
 
+```javascript
 Visual Studio Code
 Explorer
 Open Editors 
@@ -167,10 +219,11 @@ gravityai-buil.json
 {
     "UserGaiLib": true,
 }
+```
 
-Gravity AI UI
-https://www.gravity-ai.com/  
-
+## Gravity AI UI
+- https://www.gravity-ai.com/  
+```
 +
 Create a New Organization
 Name of Organization
@@ -188,9 +241,10 @@ Version
 Summary
 Upload your financial articles and this AI Model will assign a category that closest matches each article.
 Create
+```
 
-Model Upload
- 
+#### Model Upload
+``` 
 What kind of model would you like to upload ?
 Python Archive
 
@@ -213,7 +267,9 @@ What kind of data is expected as input ?
 A comma separated file or tabular data (.csv)
 Has a header row ?
 yes
+```
 
+```
 Input Schema
 +
 Field
@@ -239,9 +295,10 @@ Field
 category
 
 Submit 
+```
 
-Docker ( Installed on the computer ) 
-
+## Docker ( Installed on the computer ) 
+```
 Categorize Financial Articles
 Version 0.0.1
 
@@ -256,42 +313,72 @@ Containers
 Gravity Api Version g.1.0.0.0        
 Docker Command Help
 Load Container into Docker
-$> docker load -i ./Categorize_Financial_4b9569.docker.tar.gr
-	Run the Docker Container at URL http://localhost:7000
-$> docker run -d -p 7000:00 gx-imagesit-300a109115e44be286a8765fd68f8ac
+```
 
-Promt
+```bash
+$> docker load -i ./Categorize_Financial_4b9569.docker.tar.gr
+```
+	Run the Docker Container at URL 
+    http://localhost:7000
+```bash
+$> docker run -d -p 7000:00 gx-imagesit-300a109115e44be286a8765fd68f8ac
+```
+
+Prompt 
+```
 cd desktop
 docker load -i ./Categorize_Financial_4b9569.docker.tar.gr
 …
 docker run -d -p 7000:00 gx-imagesit-300a109115e44be286a8765fd68f8ac
 …
+```
 
 localhost:7000
-Gravity AI 
+
+## Gravity AI 
+```
 Cashboard   License Key   Upload Data   Current Jobs
 …
+```
 
+Docker 
+
+```
 Download
 Developer License Key
 Containers 
 Gravity Api Version g.1.0.0.0        
 Docker Command Help
 Load Container into Docker
+```
+
+```bash
 $> docker load -i ./Categorize_Financial_4b9569.docker.tar.gr
-	Run the Docker Container at URL http://localhost:7000
+```
+	Run the Docker Container at URL 
+    http://localhost:7000
+
+```bash
 $> docker run -d -p 7000:00 gx-imagesit-300a109115e44be286a8765fd68f8ac
+```
 
 localhost:7000
-Gravity AI 
+
+## Gravity AI 
+```
 Cashboard   License Key   Upload Data   Current Jobs
+
 License Key
 Upload License File
 …   Upload
+```
 
+```
 Upload Data
 Callback Url (optional)
-http://my.url.com/callback
+
+- http://my.url.com/callback
+
 Data File
 test_set.csv
 Data File Mime Type
@@ -302,16 +389,4 @@ Categorize Financial Articles
 Activate 
 Buy a Subscription 
 …
-
-
-
-
-
-
-
-
-
-
-
-
-
+```
